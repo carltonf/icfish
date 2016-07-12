@@ -1,6 +1,9 @@
 # Use the same aliases as Bash
 source ~/.bash_aliases
 
+# Add back some common bash path
+set -x PATH /usr/local/bin /usr/local/sbin $PATH
+
 #### environment vars settings
 # bin: icrepos binaries;
 #
