@@ -21,7 +21,7 @@ end
 set -x SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
 
 # NOTE 'vi' has been linked to 'neovim'
-set -x EDITOR /usr/bin/vi
+set -x EDITOR vi
 
 # NOTE: `bass' has resolved the whole `nvm' issue completely.
 
