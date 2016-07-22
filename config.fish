@@ -22,6 +22,10 @@ set -x SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
 
 # NOTE 'vi' has been linked to 'neovim'
 set -x EDITOR vi
+set VLESS (find /usr/share/nvim -name 'less.sh')
+if test ! -z $VLESS
+  alias less=$VLESS
+end
 
 # NOTE: `bass' has resolved the whole `nvm' issue completely.
 
