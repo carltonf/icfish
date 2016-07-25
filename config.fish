@@ -17,10 +17,14 @@ for d in $HOME/local/xbin/*/
 end
 
 # NOTE 'vi' has been linked to 'neovim'
+#
+# NOTE vim's less.sh can frequently suspended into the background and need to
+# be brought up with `fg`. It's also slower than vanilla less, so make it a
+# different name as colorful output is not always needed.
 set -x EDITOR vi
 set VLESS (find /usr/share/nvim -name 'less.sh')
 if test ! -z $VLESS
-  alias less=$VLESS
+  alias vless=$VLESS
 end
 
 # NOTE: `bass' has resolved the whole `nvm' issue completely.
