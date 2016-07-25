@@ -1,7 +1,7 @@
 # Use the same aliases as Bash
 source ~/.bash_aliases
 
-# Add back some common bash path
+# System-wide local path
 set -x PATH /usr/local/bin /usr/local/sbin $PATH
 
 #### environment vars settings
@@ -15,10 +15,6 @@ for d in $HOME/local/xbin/*/
     set -x PATH $d $PATH
   end
 end
-
-# Enable gpg ssh emulation
-# TODO is this still necessary
-set -x SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
 
 # NOTE 'vi' has been linked to 'neovim'
 set -x EDITOR vi
