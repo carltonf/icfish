@@ -27,6 +27,9 @@ if test ! -z $VLESS
   alias vless=$VLESS
 end
 
+# My own Fish AutoCompletions
+source (dirname (status -f))/ac.fish
+
 # NOTE: `bass' has resolved the whole `nvm' issue completely.
 
 # NOTE `RVM' and Ruby stuff is not used here for now, the same for Emacs `Cask',
