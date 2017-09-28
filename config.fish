@@ -34,3 +34,17 @@ source (dirname (status -f))/ac.fish
 
 # NOTE `RVM' and Ruby stuff is not used here for now, the same for Emacs `Cask',
 # which might not be used anymore.
+
+function my_fish_git_disable -d 'Disable fish git prompt to avoid performance penalty'
+  # Currently __fish_git_prompt invoking git command multiple times to get various
+  # information, which is super slow on large project like ceph, disable them for
+  # now.
+  #
+  set __fish_git_prompt_show_informative_status ''
+  set __fish_git_prompt_showdirtystate ''
+  # NOTE: this might not affect any performance
+  # set __fish_git_prompt_showstashstate ''
+  set __fish_git_prompt_showuntrackedfiles ''
+  set __fish_git_prompt_showupstream ''
+  # }}
+end
