@@ -1,8 +1,11 @@
 # Use the same aliases as Bash
 source ~/.bash_aliases
 
+# See ~/.bashrc for notes
+set -x LS_COLORS 'ow=01;90:di=01;90:ex=00;32:'
+
 # System-wide local path
-set -x PATH /usr/local/bin /usr/local/sbin $PATH
+set -x PATH $HOME/.local/bin /usr/local/bin /usr/local/sbin $PATH
 
 #### environment vars settings
 # bin: icrepos binaries;
@@ -48,3 +51,4 @@ function my_fish_git_disable -d 'Disable fish git prompt to avoid performance pe
   set __fish_git_prompt_showupstream ''
   # }}
 end
+
