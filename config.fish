@@ -26,7 +26,7 @@ end
 # different name as colorful output is not always needed.
 set -x EDITOR vi
 set VLESS (find /usr/share/nvim -name 'less.sh' 2>/dev/null)
-if test ! -z $VLESS
+if test ! -z "$VLESS"
   alias vless=$VLESS
 end
 
